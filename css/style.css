@@ -1,0 +1,588 @@
+/* ================================= 
+  Forms - Base Element Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+ font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font: 1em/1.5;
+  color: #184f68;
+  background: #accbd9;
+}
+
+header {
+	text-align: center;  
+}
+
+h1 {
+	font-size: 2.5em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+	margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* ================================= 
+  Webkit -autofill
+==================================== */
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #c1deeb inset;
+}
+ 
+/* ================================= 
+  Form Element Styles
+==================================== */
+#legend{
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+form {
+	padding: .875em 1.875em 1.875em;
+	background: #85b5ca;
+}
+
+fieldset,
+legend,
+button {
+	padding: 0;
+	border: none;
+}
+
+fieldset {
+	margin-top: 1.5em;
+}
+
+legend,
+button {
+	font-size: 1.25em;	
+}
+
+legend {
+	font-weight: 500;
+	padding-top: .5em;
+	border-top: 2px solid #679cb3;
+	margin-bottom: 1.125em;
+}
+
+input[type="text"],
+input[type="email"],
+legend {
+	width: 100%;
+}
+
+label {
+	color: #000;
+	display: inline-block;
+	margin-bottom: .5em;
+}
+
+label[for="color"] {
+	margin-top: .5em;
+}
+
+input {
+	margin-bottom: 1.125em;	
+	background-color: #c1deeb;
+	color: black;
+	font-size: 1em;
+}
+
+input[id="name"],
+input[id="mail"] {
+	color: black;
+}
+
+input {
+	font-size: 1em;
+	font-weight: 500;
+	padding: .8em;
+	background-color: #c1deeb;
+	border: 2px solid #c1deeb;
+	outline: none;
+}
+
+:focus{
+    outline: none !important;  /* Overrides Chrome outline bright blue */
+} 
+
+input:focus {
+	border: 2px solid #184f68;
+	background: #fff;
+	transition: border-color .4s, background-color .4s;
+}
+
+select::-ms-expand{
+  display:none;
+}
+
+select:focus {
+	/*border: 2px solid #184f68;*/
+	/*background: #fff;*/
+	/*transition: border-color .4s, background-color .4s;*/
+}
+
+#title:focus {
+	transition: border-color .4s, background-color .4s;
+}
+
+.focusBright {  /* This is used to highlight the Activites Label */
+  border:  2px solid #184f68;
+  background: #fff;
+}
+
+.title label {
+	color: cadetblue;
+	margin-bottom: .5em;
+}
+
+.labelSize,
+.labelDesign,
+.labelColor,
+.labelExpMonth,
+.labelExpYear {
+	display: inline-block;
+}
+
+/* ================================= 
+  Click Box Normal Styling
+  Our Boxes feature a custom arrow down. To make this work we 
+  wrapped our select box in a new division in our html.
+  The arrow is used as our background. We use a linear-gradient
+  to keep the arrow visible in our box.
+==================================== */
+.title,
+.size,
+.design,
+.color, 
+.paymentBox,
+.expMonth,
+.expYear {
+	font-size: 1em;
+	background-color: #c1deeb;
+	padding: .3em 0 .3em 0;
+}
+
+.title {
+  background: #c1deeb url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background-size: 18px 18px;
+  width: 300px;
+}
+
+.size {
+  width: 60px;
+  background:  #c1deeb url('../../img/arrow-down.png') 88% 50% no-repeat;
+  background-size: 18px 18px;
+  /*margin: 0 1em 0 0;*/
+}
+
+.design {
+  width: 200px;
+  background:  #c1deeb url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background-size: 18px 18px;
+  margin: 0 .5em 0 .5em;
+}
+
+.color {
+  width: 320px;
+  background:  #c1deeb url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background-size: 18px 18px;
+}
+
+.paymentBox {
+  width: 200px;
+  background:  #c1deeb url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background-size: 18px 18px;
+  margin-bottom: .5em;
+}
+
+.expMonth {
+  width: 150px;
+  background:  #c1deeb url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background-size: 18px 18px;
+  margin-right: 1em;
+}
+
+.expYear {
+  width: 100px;
+  background:  #c1deeb url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background-size: 18px 18px;
+}
+
+/* ================================= 
+  Select Box Normal Styling
+==================================== */
+
+.title select,
+.design select,
+.color select,
+.paymentBox select,
+.expMonth select,
+.expYear select {
+  margin: 0;
+  font-size: 1em;
+  background:
+  linear-gradient(
+  to right, 
+  #c1deeb,
+  #c1deeb 49%,
+  transparent 49%
+  );
+	padding-left: 2%;
+  border: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+
+.size select {
+  margin: 0;
+  font-size: 1em;
+  background:
+  linear-gradient(
+  to right, 
+  #c1deeb,
+  #c1deeb 49%,
+  transparent 49%
+  );
+	padding-left: 2%;
+  border: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  
+}
+
+.title select {
+  width: 300px;
+}
+
+.size select {
+  width: 70px;
+  margin: 0 4em 0 0;
+}
+
+.design select{
+	width: 200px;
+	/*margin: 0 1em 0 0;*/
+}
+
+.color select {
+  width: 320px;
+}
+
+.paymentBox select {
+  width: 200px;
+}
+
+.expMonth select {
+	width: 150px;
+}
+
+.expYear select {
+	width: 150px;
+}
+
+/* ================================= 
+  Title Brighten Styling
+==================================== */
+
+.titleBright {
+	padding: .3em 0 .3em 0;
+  width: 300px;
+  background: white url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background-size: 18px 18px;
+}
+
+.titleSelectBright{
+	  margin: 0;
+	  font-size: 1em;
+	  background:
+	  linear-gradient(
+	  to right, 
+	  white,
+	  white 87%,
+	  transparent 87%
+	  );
+    width: 300px;
+    border: none;
+    -webkit-appearance: none;
+}
+
+/* ================================= 
+  Size Brighten Styling
+==================================== */
+.sizeBright {
+  /*margin: 0 4em 0 0;*/
+	padding: .3em 0 .3em 0;
+  background:  white url('../../img/arrow-down.png') 88% 50% no-repeat;
+  background-size: 18px 18px;
+}
+
+.sizeSelectBright{
+	width: 120px;
+  margin: 0;
+  font-size: 1em;
+  background:
+  linear-gradient(
+  to right, 
+  white,
+  white 29%,
+  transparent 29%
+  );
+  border: none;
+  -webkit-appearance: none;
+}
+
+/* ================================= 
+  Design Brighten Styling
+==================================== */
+.designBright {
+  margin: 0 1em 0 0;
+	padding: .3em 0 .3em 0;
+  background:  white url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background-size: 18px 18px;
+}
+
+.designSelectBright{
+  margin: 0 1em 0 0;
+	width: 200px;
+  margin: 0;
+  font-size: 1em;
+  background:
+  linear-gradient(
+  to right, 
+  white,
+  white 49%,
+  transparent 49%
+  );
+  border: none;
+  -webkit-appearance: none;
+	
+}
+/* ================================= 
+   Color Brighten Styling
+==================================== */
+.colorBright {
+  background:  white url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background-size: 18px 18px;
+  font-size: 1em;
+	padding: .3em 0 .3em 0;
+}
+
+.colorSelectBright{
+	width: 320px;
+	margin: 0;
+  font-size: 1em;
+  background:
+  linear-gradient(
+  to right, 
+  white,
+  white 87%,
+  transparent 87%
+  );
+  border: none;
+  -webkit-appearance: none;
+}
+
+/* ================================= 
+    Expire Month Brighten Styling
+==================================== */
+.expMonthBright {
+  font-size: 1em;
+  padding: .3em 0 .3em 0;
+  background:  white url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background-size: 18px 18px;
+}
+
+.expMonthSelectBright{
+  margin: 0;
+  font-size: 1em;
+  background:
+  linear-gradient(
+  to right, 
+  white,
+  white 49%,
+  transparent 49%
+  );
+  border: none;
+  -webkit-appearance: none;
+}
+
+/* ================================= 
+    Expire Year Brighten Styling
+==================================== */
+.expYearBright {
+  color: pink;
+  font-size: 1em;
+  padding: .3em 0 .3em 0;
+  background:  white url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background-size: 18px 18px;
+}
+
+.expYearSelectBright{
+  width: 300px;
+  color: red;
+  margin: 0;
+  font-size: 1em;
+  background:
+  linear-gradient(
+  to right, 
+  white,
+  white 49%,
+  transparent 49%
+  );
+  border: none;
+  -webkit-appearance: none;
+  
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline-block;
+}
+
+button {
+	color: #184f68;
+	padding: .55em 1.25em;
+	background:#c1deeb;
+	margin: 1.25em 0 .5em;
+	cursor: pointer;
+}
+
+button:hover {
+	color: #fff;
+	background: #184c62;
+}
+
+#colors-js-puns {
+	display: none;
+}
+
+#titleOther {
+	padding: .6em;
+	width: 40%;
+	display: block;
+	margin: 0;
+}
+
+#labelTitleOther {
+	margin: 1em 0 .5em 0;
+	display: block;
+}
+
+#legend label {
+	width: 40%;
+	/*color: red;*/
+}
+
+.activities legend {
+	width: 40%;
+}
+
+.activities span{
+	display: none;
+	color: #184f68;
+	font-weight: 500;
+}
+
+.displayBlock {
+	display: block;
+}
+
+.displayInline {
+	display: inline;
+}
+
+.displayNone {
+	display: none;
+}
+
+
+/* ================================= 
+  Page Styles
+==================================== */
+
+.container {
+	margin: auto;
+	max-width: 680px;
+}
+
+/*.shirt div  {*/
+	/*display: inline-block;*/
+/*	margin: 0 .5em 0 0;*/
+/*}*/
+
+.interests input {
+	margin-bottom: 0;
+}
+
+.credit-card {
+	margin-top: 1.25em;
+}
+
+/* ================================= 
+  Helper Classes
+==================================== */
+
+.is-hidden {
+	display: none;
+}
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.error {      /* display error messages in red */
+  color: #b30000;
+  font-weight: 500;
+}
+
+.timeConflict {      /* display error messages in red */
+  color: white;
+  font-weight: 100;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 0) and (max-width: 679px) {
+	header {
+		padding: 2em 0;
+	}
+	button {
+		width: 100%;
+	}
+}
+
+@media (min-width: 680px) {
+	header {
+		padding: 4.65em 0 2.5em;
+	}
+	.col {
+		float: left;
+	}
+	.col + .col {
+		margin-left: 2.5%;
+	}
+	.col-3 {
+		width: 23%;
+	}
+	.col-6 {
+		width: 49%;
+	}
+}
