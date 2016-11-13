@@ -17,16 +17,28 @@ $('button').click(function() {   // If submit button is clicked
   checkErrors();
 });
 
+$("#mail").on('change', function() {
+  $('label[for="mail"]').removeClass('error scroll').text('Email:');
+});
+
 $("#title").on('change', function() {
   $('#titleBox').removeClass('titleBright'); // Remove bright (field empty) styling
   $('#titleBox').addClass('title');          // Normal styling   
   
   $('select[id="title"]').removeClass('titleSelectBright'); // Bright styling with white background
   
+  if($('#title option[value]:selected').text() === 'Other') { //Other Box is only displayed
+    $('#labelTitleOther').removeClass('displayNone');         //  when title selected is "other"
+    $('#labelTitleOther').addClass('labelTitleOther');
+    $('#titleOther').removeClass('displayNone');
+    $('#titleOther').addClass('titleOther');
+  }
+  
   $('label[for="title"]').removeClass('error focusBright scroll').text('Job Role:'); //Remove error styling
   $('#title').removeClass('focusBright scroll');   // Remove focus and scroll
   $('label[for="titleOther"]').removeClass('error').text('Other Job Role:'); //Error Label for titleOther is removed
   $("#titleOther").removeClass('focusBright scroll');  // Remove error styling for titleOther label
+  
   var labelReturn = checkInputs();     //Look for next field that is empty so we can give it a white background
   labelReturn.addClass('focusBright scroll');  // Add the white background and scroll to first field that is empty
   focusScrollClick();      // focus on first empty field 
@@ -110,6 +122,8 @@ $("#payment").on('change', function() {
 });
 
 $("#cc-num").on('change', function() {
+  $('label[for="cc-num"]').removeClass('error').text("Card Number:"); //We should remove label errors when clicked
+  
   $("#color").removeClass('scroll'); // After activities have been clicked we can scroll down
   $('#cc-num').removeClass('focusBright');
   var labelReturn = checkInputs();
@@ -118,6 +132,7 @@ $("#cc-num").on('change', function() {
 });
 
 $("#zip").on('change', function() {
+  $('label[for="zip"]').removeClass('error').text("Zip:"); 
   $('#zip').removeClass('focusBright');
   var labelReturn = checkInputs();
   labelReturn.addClass('focusBright scroll');
@@ -125,6 +140,7 @@ $("#zip").on('change', function() {
 });
 
 $("#cvv").on('change', function() {
+  $('label[for="cvv"]').removeClass('error').text("CVV:");
   $('#cvv').removeClass('focusBright');
   var labelReturn = checkInputs();
   labelReturn.addClass('focusBright scroll');
@@ -571,7 +587,7 @@ function computeTotalCost() {  //Calculates total for activities selected
     total += 100;
   }
   var totalCost = document.getElementById('totalCost');
-  totalCost.innerHTML = "Total Cost - " + total;
+  totalCost.innerHTML = "Total Cost - $" + total;
 
 }
 

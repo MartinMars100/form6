@@ -83,6 +83,10 @@ legend {
 	width: 100%;
 }
 
+/*input[name="user_cc-num"] {*/
+/*  width: 70%;*/
+/*}*/
+
 label {
 	color: #000;
 	display: inline-block;
@@ -156,13 +160,19 @@ select:focus {
 	display: inline-block;
 }
 
-/* ================================= 
+label[name="totalCost"] {
+  font-weight: 500;
+  font-size: 1.5em;
+	color: #184f68;
+}
+
+/* ================================================================= 
   Click Box Normal Styling
-  Our Boxes feature a custom arrow down. To make this work we 
+  Our Select Boxes feature a custom arrow down. To make this work we 
   wrapped our select box in a new division in our html.
   The arrow is used as our background. We use a linear-gradient
   to keep the arrow visible in our box.
-==================================== */
+================================================================= */
 .title,
 .size,
 .design,
@@ -176,48 +186,48 @@ select:focus {
 }
 
 .title {
-  background: #c1deeb url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background: #c1deeb url('/img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
   width: 300px;
 }
 
 .size {
   width: 60px;
-  background:  #c1deeb url('../../img/arrow-down.png') 88% 50% no-repeat;
+  background:  #c1deeb url('/img/arrow-down.png') 88% 50% no-repeat;
   background-size: 18px 18px;
   /*margin: 0 1em 0 0;*/
 }
 
 .design {
   width: 200px;
-  background:  #c1deeb url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background:  #c1deeb url('/img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
   margin: 0 .5em 0 .5em;
 }
 
 .color {
   width: 320px;
-  background:  #c1deeb url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background:  #c1deeb url('/img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
 }
 
 .paymentBox {
   width: 200px;
-  background:  #c1deeb url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background:  #c1deeb url('/img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
   margin-bottom: .5em;
 }
 
 .expMonth {
-  width: 150px;
-  background:  #c1deeb url('../../img/arrow-down.png') 97% 50% no-repeat;
+  width: 200px;
+  background:  #c1deeb url('/img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
   margin-right: 1em;
 }
 
 .expYear {
   width: 100px;
-  background:  #c1deeb url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background:  #c1deeb url('/img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
 }
 
@@ -300,7 +310,7 @@ select:focus {
 .titleBright {
 	padding: .3em 0 .3em 0;
   width: 300px;
-  background: white url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background: white url('/img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
 }
 
@@ -325,7 +335,7 @@ select:focus {
 .sizeBright {
   /*margin: 0 4em 0 0;*/
 	padding: .3em 0 .3em 0;
-  background:  white url('../../img/arrow-down.png') 88% 50% no-repeat;
+  background:  white url('/img/arrow-down.png') 88% 50% no-repeat;
   background-size: 18px 18px;
 }
 
@@ -350,7 +360,7 @@ select:focus {
 .designBright {
   margin: 0 1em 0 0;
 	padding: .3em 0 .3em 0;
-  background:  white url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background:  white url('/img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
 }
 
@@ -374,7 +384,7 @@ select:focus {
    Color Brighten Styling
 ==================================== */
 .colorBright {
-  background:  white url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background:  white url('/img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
   font-size: 1em;
 	padding: .3em 0 .3em 0;
@@ -401,11 +411,12 @@ select:focus {
 .expMonthBright {
   font-size: 1em;
   padding: .3em 0 .3em 0;
-  background:  white url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background:  white url('/img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
 }
 
 .expMonthSelectBright{
+  width: 200px;
   margin: 0;
   font-size: 1em;
   background:
@@ -426,12 +437,12 @@ select:focus {
   color: pink;
   font-size: 1em;
   padding: .3em 0 .3em 0;
-  background:  white url('../../img/arrow-down.png') 97% 50% no-repeat;
+  background:  white url('/img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
 }
 
 .expYearSelectBright{
-  width: 300px;
+  width: 200px;
   color: red;
   margin: 0;
   font-size: 1em;
@@ -470,14 +481,14 @@ button:hover {
 	display: none;
 }
 
-#titleOther {
+.titleOther {
 	padding: .6em;
-	width: 40%;
+	width: 60%;
 	display: block;
 	margin: 0;
 }
 
-#labelTitleOther {
+.labelTitleOther {
 	margin: 1em 0 .5em 0;
 	display: block;
 }
@@ -497,18 +508,6 @@ button:hover {
 	font-weight: 500;
 }
 
-.displayBlock {
-	display: block;
-}
-
-.displayInline {
-	display: inline;
-}
-
-.displayNone {
-	display: none;
-}
-
 
 /* ================================= 
   Page Styles
@@ -519,10 +518,6 @@ button:hover {
 	max-width: 680px;
 }
 
-/*.shirt div  {*/
-	/*display: inline-block;*/
-/*	margin: 0 .5em 0 0;*/
-/*}*/
 
 .interests input {
 	margin-bottom: 0;
@@ -535,6 +530,18 @@ button:hover {
 /* ================================= 
   Helper Classes
 ==================================== */
+
+.displayBlock {
+	display: block;
+}
+
+.displayInline {
+	display: inline;
+}
+
+.displayNone {
+	display: none;
+}
 
 .is-hidden {
 	display: none;
