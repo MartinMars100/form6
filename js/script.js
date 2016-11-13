@@ -4,7 +4,6 @@
 // A local variable can have the same name as a global variable.
 
 document.getElementById("name").focus();
-// var num = '';
 $(document).keypress(function(event){
 	var keycode = (event.keyCode ? event.keyCode : event.which);
 	if(keycode == '13' ){   // If enter key is pressed
