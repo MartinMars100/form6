@@ -186,48 +186,48 @@ label[name="totalCost"] {
 }
 
 .title {
-  background: #c1deeb url('/img/arrow-down.png') 97% 50% no-repeat;
+  background: #c1deeb url('img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
   width: 300px;
 }
 
 .size {
   width: 60px;
-  background:  #c1deeb url('/img/arrow-down.png') 88% 50% no-repeat;
+  background:  #c1deeb url('img/arrow-down.png') 88% 50% no-repeat;
   background-size: 18px 18px;
   /*margin: 0 1em 0 0;*/
 }
 
 .design {
   width: 200px;
-  background:  #c1deeb url('/img/arrow-down.png') 97% 50% no-repeat;
+  background:  #c1deeb url('img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
   margin: 0 .5em 0 .5em;
 }
 
 .color {
   width: 320px;
-  background:  #c1deeb url('/img/arrow-down.png') 97% 50% no-repeat;
+  background:  #c1deeb url('img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
 }
 
 .paymentBox {
   width: 200px;
-  background:  #c1deeb url('/img/arrow-down.png') 97% 50% no-repeat;
+  background:  #c1deeb url('img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
   margin-bottom: .5em;
 }
 
 .expMonth {
   width: 200px;
-  background:  #c1deeb url('/img/arrow-down.png') 97% 50% no-repeat;
+  background:  #c1deeb url('img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
   margin-right: 1em;
 }
 
 .expYear {
   width: 100px;
-  background:  #c1deeb url('/img/arrow-down.png') 97% 50% no-repeat;
+  background:  #c1deeb url('img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
 }
 
@@ -310,7 +310,7 @@ label[name="totalCost"] {
 .titleBright {
 	padding: .3em 0 .3em 0;
   width: 300px;
-  background: white url('/img/arrow-down.png') 97% 50% no-repeat;
+  background: white url('img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
 }
 
@@ -335,7 +335,7 @@ label[name="totalCost"] {
 .sizeBright {
   /*margin: 0 4em 0 0;*/
 	padding: .3em 0 .3em 0;
-  background:  white url('/img/arrow-down.png') 88% 50% no-repeat;
+  background:  white url('img/arrow-down.png') 88% 50% no-repeat;
   background-size: 18px 18px;
 }
 
@@ -360,7 +360,7 @@ label[name="totalCost"] {
 .designBright {
   margin: 0 1em 0 0;
 	padding: .3em 0 .3em 0;
-  background:  white url('/img/arrow-down.png') 97% 50% no-repeat;
+  background:  white url('img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
 }
 
@@ -384,7 +384,7 @@ label[name="totalCost"] {
    Color Brighten Styling
 ==================================== */
 .colorBright {
-  background:  white url('/img/arrow-down.png') 97% 50% no-repeat;
+  background:  white url('img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
   font-size: 1em;
 	padding: .3em 0 .3em 0;
@@ -411,7 +411,7 @@ label[name="totalCost"] {
 .expMonthBright {
   font-size: 1em;
   padding: .3em 0 .3em 0;
-  background:  white url('/img/arrow-down.png') 97% 50% no-repeat;
+  background:  white url('img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
 }
 
@@ -437,7 +437,7 @@ label[name="totalCost"] {
   color: pink;
   font-size: 1em;
   padding: .3em 0 .3em 0;
-  background:  white url('/img/arrow-down.png') 97% 50% no-repeat;
+  background:  white url('img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
 }
 
