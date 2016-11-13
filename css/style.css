@@ -186,7 +186,7 @@ label[name="totalCost"] {
 }
 
 .title {
-  background: #c1deeb url('img/arrow-down.png') 97% 50% no-repeat;
+  background: #c1deeb url('../img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
   width: 300px;
 }
