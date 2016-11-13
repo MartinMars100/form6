@@ -9,14 +9,22 @@ $(document).keypress(function(event){
 	if(keycode == '13' ){   // If enter key is pressed
 	  checkErrors();    
 	event.preventDefault();
-	}
+	} 
 });
 
 $('button').click(function() {   // If submit button is clicked
   checkErrors();
 });
 
+$("#name").on('change', function() {
+  $('#name').removeClass('focusBright scroll');
+  $('#name').removeClass('nameBright'); // Remove bright (field empty) styling
+  $('label[for="name"]').removeClass('error scroll').text('Name:');
+});
+
 $("#mail").on('change', function() {
+  $('#mail').removeClass('focusBright scroll');
+  $('#mail').removeClass('nameBright'); // Remove bright (field empty) styling
   $('label[for="mail"]').removeClass('error scroll').text('Email:');
 });
 
@@ -91,7 +99,6 @@ $("#color").on('change', function() {
 });
 
 $('.activities input[type="checkbox"]').on('change', function() {
-  console.log('activity was clicked');
   var act = $(this);
   checkActivity2(act);
   computeTotalCost();
@@ -174,8 +181,8 @@ function checkInputs() {            // Check for next empty field
   
   var nameInput = $("#name").val(); // val is value of what user enters in this field
   var label;
-  if (nameInput === '') {           // If the field is empty
-    label = $('#name');         // Return and change the styling to a white background
+  if (nameInput === '') {    // If the field is empty
+    label = $('#name');      // Return and change the styling to a white background
     return label;
   } 
 
@@ -280,7 +287,7 @@ function checkCardInputs() {  //Check for empty card fields
 
 function checkErrors() {  // This function runs when enter key is pressed or submit button is clicked
   var nameInput = $("#name").val();  // These errors change the field label to a red message
-  if (nameInput === '') {
+  if (nameInput === '' || nameInput.length === 0) {
     $('label[for="name"]').addClass('error scroll').text("Enter Your Name");
   } else {
     $('label[for="name"]').removeClass('error scroll').text('Name:');

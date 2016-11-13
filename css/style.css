@@ -219,7 +219,7 @@ label[name="totalCost"] {
 }
 
 .expMonth {
-  width: 200px;
+  width: 150px;
   background:  #c1deeb url('../img/arrow-down.png') 97% 50% no-repeat;
   background-size: 18px 18px;
   margin-right: 1em;
