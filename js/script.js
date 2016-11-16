@@ -1,9 +1,17 @@
-// Any variable that is initialized inside a function using the var 
-// keyword will have a local scope. If a variable is initialized inside 
-// a function without var, it will have a global scope. 
-// A local variable can have the same name as a global variable.
-
 document.getElementById("name").focus();
+
+// Hide Title Other Input, Shirt Color and Paypal/Bitcoin Inputs for JS enabled browsers
+$('#titleOther').addClass('displayNone');
+$('#labelTitleOther').addClass('displayNone');
+
+$('#colors-js-puns').addClass('displayNone');
+
+// We also hide the general message for payments - custom messages will appear for cc/paypal/bitcoin
+$('#generalPayment').addClass('displayNone');
+
+$('.payment').append('<div id="paymentCustomMessage"></div>');
+// $('#paymentCustomMessage').text('Practice Message Two');
+
 $(document).keypress(function(event){
 	var keycode = (event.keyCode ? event.keyCode : event.which);
 	if(keycode == '13' ){   // If enter key is pressed
@@ -605,18 +613,22 @@ function checkPayment() { // Paypal, Bitcoin and Credit Card payments will displ
             $('#credit-card').addClass('displayBlock');
             $('#paypal').addClass('displayNone');
             $('#bitcoin').addClass('displayNone');
+            $('#paymentCustomMessage').text('');
+            // $('#paymentMessage').append('<div class="page-header cf" id="page-header-box">');
             break;
         case "PayPal":
             $('#credit-card').addClass('displayNone');
             $('#bitcoin').addClass('displayNone');
             $('#paypal').removeClass('displayNone');
             $('#paypal').addClass('displayInline');
+            $('#paymentCustomMessage').text('You selected PayPal. We will take you to the PayPal website when you click the Register button below.');
             break;
         case "Bitcoin":
             $('#credit-card').addClass('displayNone');
             $('#paypal').addClass('displayNone');
             $('#bitcoin').removeClass('displayNone');
             $('#bitcoin').addClass('displayInline');
+            $('#paymentCustomMessage').text('You selected Bitcoin. We will take you to the Bitcoin website when you click the Register button below.');
             break;
   }    
 }

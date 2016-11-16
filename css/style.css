@@ -83,10 +83,6 @@ legend {
 	width: 100%;
 }
 
-/*input[name="user_cc-num"] {*/
-/*  width: 70%;*/
-/*}*/
-
 label {
 	color: #000;
 	display: inline-block;
@@ -118,6 +114,10 @@ input {
 	outline: none;
 }
 
+input[id="titleOther"]{
+  width: 50%;
+}
+
 :focus{
     outline: none !important;  /* Overrides Chrome outline bright blue */
 } 
@@ -129,6 +129,7 @@ input:focus {
 }
 
 select::-ms-expand{
+  /*display: inline-block;*/
   display:none;
 }
 
@@ -150,6 +151,23 @@ select:focus {
 .title label {
 	color: cadetblue;
 	margin-bottom: .5em;
+}
+
+#colors-js-puns {
+	/*display: none;*/
+}
+
+
+.labelTitleOther {
+	margin: 1em 0 .5em 0;
+	display: block;
+}
+
+.titleOther {
+	padding: .6em;
+	width: 100%;
+	display: block;
+	margin: 0;
 }
 
 .labelSize,
@@ -181,7 +199,7 @@ label[name="totalCost"] {
 .expMonth,
 .expYear {
 	font-size: 1em;
-	background-color: #c1deeb;
+	/*background-color: #c1deeb;*/
 	padding: .3em 0 .3em 0;
 }
 
@@ -477,32 +495,17 @@ button:hover {
 	background: #184c62;
 }
 
-#colors-js-puns {
-	display: none;
-}
 
-.titleOther {
-	padding: .6em;
-	width: 60%;
-	display: block;
-	margin: 0;
-}
-
-.labelTitleOther {
-	margin: 1em 0 .5em 0;
-	display: block;
-}
 
 #legend label {
 	width: 40%;
-	/*color: red;*/
 }
 
 .activities legend {
 	width: 40%;
 }
 
-.activities span{
+.activities span {
 	display: none;
 	color: #184f68;
 	font-weight: 500;
